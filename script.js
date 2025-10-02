@@ -32,7 +32,7 @@ const monsters = [
 const locations = [
     {
         name: 'town square (Praça da cidade)',
-        'button text': ['Go to store (Ir para loja)', 'Go to cave (Ir para caverna)', 'Fight dragon (Enfrentar o dragão)'],
+        'button text': ['Ir para loja', 'Ir para caverna', 'Enfrentar o dragão'],
         'button functions': [goStore, goCave, fightDragon],
         text: "Você está na praça da cidade. Você vê uma placa que diz \"Loja\"."
     },
@@ -170,7 +170,7 @@ function fightDragon() {
 
 function attack() {
     text.innerText = `O ${monsters[fighting].name} ataca.`;
-    text.innerText += `Você ataca com sua ${weapons[currentWeaponIndex].name}.`;
+    text.innerText += `Você ataca com seu(a) ${weapons[currentWeaponIndex].name}.`;
     if (isMonsterHit()) {    
         health -= getMonsterAttackValue(monsters[fighting].level);
     } else {
